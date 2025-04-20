@@ -38,20 +38,19 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-background flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <Link to="/" className="flex justify-center items-center space-x-2">
+        <Link to="/" className="flex justify-center items-center">
           <img 
             src="/lovable-uploads/9904f552-8589-4804-a70f-09bb2bb51fbe.png" 
             alt="Heavenly Apple" 
-            className="h-16 w-16"
+            className="w-48"
           />
-          <span className="text-2xl font-bold text-red-600">Heavenly Apple</span>
         </Link>
-        <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+        <h2 className="mt-6 text-center text-3xl font-extrabold text-foreground">
           Sign in to your account
         </h2>
-        <p className="mt-2 text-center text-sm text-gray-600">
+        <p className="mt-2 text-center text-sm text-muted-foreground">
           Or{" "}
           <Link to="/signup" className="font-medium text-primary hover:text-primary-hover">
             create a new account
@@ -60,7 +59,7 @@ const Login = () => {
       </div>
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+        <div className="bg-card py-8 px-4 shadow-lg dark:shadow-primary/5 rounded-lg sm:px-10 glass-morphism">
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <Label htmlFor="email">Email address</Label>
@@ -74,6 +73,7 @@ const Login = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="you@example.com"
+                  className="bg-background"
                 />
               </div>
             </div>
@@ -90,6 +90,7 @@ const Login = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
+                  className="bg-background"
                 />
                 <button
                   type="button"
@@ -97,9 +98,9 @@ const Login = () => {
                   onClick={() => setShowPassword(!showPassword)}
                 >
                   {showPassword ? (
-                    <EyeOff className="h-4 w-4 text-gray-500" />
+                    <EyeOff className="h-4 w-4 text-muted-foreground" />
                   ) : (
-                    <Eye className="h-4 w-4 text-gray-500" />
+                    <Eye className="h-4 w-4 text-muted-foreground" />
                   )}
                 </button>
               </div>
@@ -111,9 +112,9 @@ const Login = () => {
                   id="remember-me"
                   name="remember-me"
                   type="checkbox"
-                  className="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded"
+                  className="h-4 w-4 text-primary focus:ring-primary border-input rounded"
                 />
-                <Label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
+                <Label htmlFor="remember-me" className="ml-2 block text-sm">
                   Remember me
                 </Label>
               </div>
@@ -139,10 +140,10 @@ const Login = () => {
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-gray-300" />
+                <div className="w-full border-t border-input" />
               </div>
               <div className="relative flex justify-center text-sm">
-                <span className="px-2 bg-white text-gray-500">Or continue with</span>
+                <span className="px-2 bg-card text-muted-foreground">Or continue with</span>
               </div>
             </div>
 
@@ -162,4 +163,3 @@ const Login = () => {
 };
 
 export default Login;
-
