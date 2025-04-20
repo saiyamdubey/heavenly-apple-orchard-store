@@ -50,9 +50,9 @@ const Signup = () => {
           <img 
             src="/lovable-uploads/9904f552-8589-4804-a70f-09bb2bb51fbe.png" 
             alt="Heavenly Apple" 
-            className="h-16 w-16"
+            className="h-16 w-72"
           />
-          <span className="text-2xl font-bold text-red-600">Heavenly Apple</span>
+          {/* <span className="text-2xl font-bold text-red-600">Heavenly Apple</span> */}
         </Link>
         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
           Create your account
