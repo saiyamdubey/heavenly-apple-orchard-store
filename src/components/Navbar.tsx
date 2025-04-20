@@ -38,7 +38,7 @@ const Navbar = () => {
 
           <div className="flex items-center space-x-4">
             <ThemeToggle />
-            <button className="text-foreground hover:text-primary transition-colors">
+            <button title="hi" className="text-foreground hover:text-primary transition-colors">
               <Search className="h-5 w-5" />
             </button>
             <Link to="/cart" className="text-foreground hover:text-primary transition-colors">
