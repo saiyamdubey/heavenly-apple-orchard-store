@@ -29,6 +29,10 @@ const Navbar = () => {
             </Link>
             <Link to="/contact" className="text-foreground hover:text-primary transition-colors">
               Contact
+            </Link><Link to="/login" className="text-foreground hover:text-primary transition-colors">
+              Login
+            </Link><Link to="/signup" className="text-foreground hover:text-primary transition-colors">
+              SignUp
             </Link>
           </div>
 
