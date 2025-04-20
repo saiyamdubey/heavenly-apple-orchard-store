@@ -46,8 +46,13 @@ const Signup = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <Link to="/" className="flex justify-center">
-          <img src="/apple-logo.png" alt="Heavenly Apple" className="h-12 w-12" />
+        <Link to="/" className="flex justify-center items-center space-x-2">
+          <img 
+            src="/lovable-uploads/9904f552-8589-4804-a70f-09bb2bb51fbe.png" 
+            alt="Heavenly Apple" 
+            className="h-16 w-16"
+          />
+          <span className="text-2xl font-bold text-red-600">Heavenly Apple</span>
         </Link>
         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
           Create your account
@@ -205,3 +210,4 @@ const Signup = () => {
 };
 
 export default Signup;
+

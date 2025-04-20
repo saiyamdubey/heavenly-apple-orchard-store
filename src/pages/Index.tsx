@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
@@ -36,18 +35,25 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative h-[600px] bg-gradient-to-r from-primary/10 to-secondary/10">
         <div className="container mx-auto px-4 h-full flex items-center">
-          <div className="max-w-2xl animate-fade-in">
-            <h1 className="text-5xl font-bold text-gray-800 mb-6">
-              Exceptional Apples,
-              <br />
-              Delivered Fresh
-            </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              Experience the finest hand-picked apples from our orchards to your doorstep.
-            </p>
-            <Button asChild className="bg-primary hover:bg-primary-hover text-white px-8 py-6 text-lg">
-              <Link to="/products">Shop Now</Link>
-            </Button>
+          <div className="max-w-2xl animate-fade-in flex items-center space-x-6">
+            <img 
+              src="/lovable-uploads/9904f552-8589-4804-a70f-09bb2bb51fbe.png" 
+              alt="Heavenly Apple" 
+              className="h-24 w-24"
+            />
+            <div>
+              <h1 className="text-5xl font-bold text-gray-800 mb-6">
+                Exceptional Apples,
+                <br />
+                Delivered Fresh
+              </h1>
+              <p className="text-xl text-gray-600 mb-8">
+                Experience the finest hand-picked apples from our orchards to your doorstep.
+              </p>
+              <Button asChild className="bg-primary hover:bg-primary-hover text-white px-8 py-6 text-lg">
+                <Link to="/products">Shop Now</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

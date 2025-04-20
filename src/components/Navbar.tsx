@@ -8,8 +8,12 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
-            <img src="/apple-logo.png" alt="Heavenly Apple" className="h-8 w-8" />
-            <span className="text-xl font-semibold text-gray-800">Heavenly Apple</span>
+            <img 
+              src="/lovable-uploads/9904f552-8589-4804-a70f-09bb2bb51fbe.png" 
+              alt="Heavenly Apple" 
+              className="h-10 w-10"
+            />
+            <span className="text-xl font-semibold text-red-600">Heavenly Apple</span>
           </Link>
           
           <div className="hidden md:flex space-x-8">
@@ -42,3 +46,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
