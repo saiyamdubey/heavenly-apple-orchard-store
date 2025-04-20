@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
@@ -51,7 +50,7 @@ const testimonials = [
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       <Navbar />
       
       {/* Hero Section */}
@@ -160,26 +159,6 @@ const Index = () => {
                 Subscribe
               </Button>
             </form>
-          </div>
-        </div>
-      </section>
-
-      {/* Quick Links */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Fast Delivery</h3>
-              <p className="text-gray-600">Same-day delivery available in select areas.</p>
-            </div>
-            <div className="text-center">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Quality Guarantee</h3>
-              <p className="text-gray-600">100% satisfaction or your money back.</p>
-            </div>
-            <div className="text-center">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Support Local</h3>
-              <p className="text-gray-600">Supporting local farmers and communities.</p>
-            </div>
           </div>
         </div>
       </section>
