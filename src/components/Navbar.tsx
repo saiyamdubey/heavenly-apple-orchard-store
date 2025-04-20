@@ -17,8 +17,12 @@ const Navbar = () => {
           </Link>
           
           <div className="hidden md:flex space-x-8">
-            <Link to="/products" className="text-foreground hover:text-primary transition-colors">
+          <Link to="/" className="text-foreground hover:text-primary transition-colors">
+              Home
+            </Link><Link to="/products" className="text-foreground hover:text-primary transition-colors">
               Shop
+            </Link><Link to="/cart" className="text-foreground hover:text-primary transition-colors">
+              Cart
             </Link>
             <Link to="/about" className="text-foreground hover:text-primary transition-colors">
               About

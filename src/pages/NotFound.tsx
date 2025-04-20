@@ -20,9 +20,9 @@ const NotFound = () => {
           <img 
             src="/lovable-uploads/9904f552-8589-4804-a70f-09bb2bb51fbe.png" 
             alt="Heavenly Apple" 
-            className="h-24 w-24"
+            className="h-24 w-72"
           />
-          <h1 className="text-4xl font-bold text-red-600 mb-4">Heavenly Apple</h1>
+          {/* <h1 className="text-4xl font-bold text-red-600 mb-4">Heavenly Apple</h1> */}
         </div>
         <h2 className="text-4xl font-bold mb-4">404</h2>
         <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
