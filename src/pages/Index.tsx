@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
@@ -10,6 +11,8 @@ const featuredProducts = [
     price: 2.99,
     image: "https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?w=800&q=80",
     category: "Premium",
+    flavor: "Sweet & Crisp",
+    origin: "Washington",
   },
   {
     id: "2",
@@ -17,6 +20,8 @@ const featuredProducts = [
     price: 1.99,
     image: "https://images.unsplash.com/photo-1570913149827-d2ac84ab3f9a?w=800&q=80",
     category: "Classic",
+    flavor: "Sweet & Juicy",
+    origin: "California",
   },
   {
     id: "3",
@@ -24,6 +29,23 @@ const featuredProducts = [
     price: 2.49,
     image: "https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?w=800&q=80",
     category: "Premium",
+    flavor: "Sweet-Tart",
+    origin: "Oregon",
+  },
+];
+
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    role: "Food Blogger",
+    content: "The best apples I've ever tasted. The quality is consistently excellent.",
+    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=200&h=200&fit=crop",
+  },
+  {
+    name: "Mike Chen",
+    role: "Chef",
+    content: "Heavenly Apple's selection is unmatched. Perfect for my restaurant's desserts.",
+    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=200&h=200&fit=crop",
   },
 ];
 
@@ -67,6 +89,38 @@ const Index = () => {
               <ProductCard key={product.id} {...product} />
             ))}
           </div>
+          <div className="text-center mt-8">
+            <Button variant="outline" asChild>
+              <Link to="/products">View All Products</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-semibold text-gray-800 mb-12 text-center">
+            What Our Customers Say
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {testimonials.map((testimonial) => (
+              <div key={testimonial.name} className="bg-gray-50 p-6 rounded-lg">
+                <div className="flex items-center mb-4">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-12 h-12 rounded-full object-cover mr-4"
+                  />
+                  <div>
+                    <h3 className="font-semibold text-gray-800">{testimonial.name}</h3>
+                    <p className="text-gray-600 text-sm">{testimonial.role}</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 italic">{testimonial.content}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -106,6 +160,26 @@ const Index = () => {
                 Subscribe
               </Button>
             </form>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Links */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Fast Delivery</h3>
+              <p className="text-gray-600">Same-day delivery available in select areas.</p>
+            </div>
+            <div className="text-center">
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Quality Guarantee</h3>
+              <p className="text-gray-600">100% satisfaction or your money back.</p>
+            </div>
+            <div className="text-center">
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Support Local</h3>
+              <p className="text-gray-600">Supporting local farmers and communities.</p>
+            </div>
           </div>
         </div>
       </section>
